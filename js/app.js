@@ -52,6 +52,20 @@ function validarFormulario(e) {
     e.preventDefault();
     const { moneda, criptomoneda } = objBusqueda;
     if (!moneda || !criptomoneda) {
-        console.log('Todos los campos son obligatorios');
+        mostrarAlerta('Todos los campos son obligatorios');
+    }
+}
+
+function mostrarAlerta(msg) {
+    const alerta = document.querySelector('.error');
+    if(!alerta) {
+        const divMensaje = document.createElement('div');
+        divMensaje.classList.add('error');
+        divMensaje.textContent = msg;
+        formulario.appendChild(divMensaje);
+
+        setTimeout(() => {
+            divMensaje.remove();
+        }, 3000);
     }
 }
