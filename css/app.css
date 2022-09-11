@@ -50,7 +50,19 @@ input[type="submit"]{
 
 .resultado {
     color: white;
-
+    line-height: 1.2;
+}
+@media (min-width: 1280px) {
+    .resultado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+.resultado img {
+    max-width: 15rem;
+    margin-top: 0;
 }
 .resultado h2 {
     font-weight: bold;
@@ -60,6 +72,7 @@ input[type="submit"]{
 
 .resultado p {
     font-size: 18px!important;
+    margin-bottom: .5rem;
 }
 .resultado p span {
     font-weight: bold;
